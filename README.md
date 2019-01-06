@@ -12,5 +12,7 @@ xsd2json supports the key XSD features, including:
 - Restrictions on strings (length, pattern, enum)
 - Restrictions on numbers (min, max)
 - SUpport for XSD choices via "oneOf"
+## Version support
+xsd2json generates schema files compatible with JSON Schema draft 4.
 ## Known limitations
 xsd2json has not been extensively tested. XSD is a rich and compex standard, and there are undoubtedly many XSDs that will break the current version.
