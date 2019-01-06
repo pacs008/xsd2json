@@ -11,7 +11,19 @@ xsd2json supports the key XSD features, including:
 - Enforcing strict compliance via "additionalProperties": false
 - Restrictions on strings (length, pattern, enum)
 - Restrictions on numbers (min, max)
-- SUpport for XSD choices via "oneOf"
+- Support for XSD choices via "oneOf"
+## Attributes
+There is no direct support for attributes in JSON Schema, so the following mapping convention is followed:
+- Map to an object type
+- The object contains key "#name": value of XML text
+- The object also contains keys "@Attribname", one per attribute.
+Example:
+`
+"IntrBkSttlmAmt": {
+   "#name": 1234,
+    "@Ccy": "GBP"
+},
+`
 ## Version support
 xsd2json generates schema files compatible with JSON Schema draft 4.
 ## Known limitations
