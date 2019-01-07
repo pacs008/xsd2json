@@ -1,5 +1,5 @@
 ## Background
-In the world of bank-to-bank payments, the standard for message formats is ISO20022. This is an XML format, and there are many message types defined by XSDs at https://www.iso20022.org/. At the same time, there is increasing usage of APIs for payments. Hence there is a need to represent ISO20022 messages as XML. To ensure that the mapping is done correctly, a tool to convert XSD to JSON Schema was needed. **xsd2json** is that tool.
+In the world of bank-to-bank payments, the standard for message formats is ISO20022. This is an XML format, and there are many message types defined by XSDs at https://www.iso20022.org/. At the same time, there is increasing usage of APIs for payments. Hence there is a need to represent ISO20022 messages as JSON. To ensure that the mapping is done correctly, a tool to convert XSD to JSON Schema was needed. **xsd2json** is that tool.
 ## Usage
 **xsd2json -in XSDfilename -out JSONschemafilename [-dom domainname]**
 Reads the input XSD, parses it into internal data strcutures, then writes it out as JSON schema. The optional domain parameter is used to generate the "$id" key for the file.
