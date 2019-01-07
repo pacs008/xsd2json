@@ -15,7 +15,7 @@ xsd2json supports the key XSD features, including:
 ## Attributes
 There is no direct support for attributes in JSON Schema, so the following mapping convention is followed:
 - Map to an object type
-- The object contains key "#name": value of XML text
+- The object contains key "#value": value of XML text
 - The object also contains keys "@Attribname", one per attribute.
 Example:
 `
