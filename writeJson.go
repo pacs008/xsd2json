@@ -66,13 +66,13 @@ func writeElement(el element, f io.Writer, ctxt *context, indent int) {
 
 // write the body of a simple type
 // if it has attributes, turn it into an object
-// the #name element represents the base type
+// the #value element represents the base type
 // each attribute forms a separate element named @Attributename
 func writeSimpleBody(simple simpleType, f io.Writer, ctxt *context, indent int) {
 	if len(simple.attrs) > 0 {
 		inPrintf(f, indent, "\"type\": \"object\",\n")
 		inPrintf(f, indent, "\"properties\": {\n")
-		inPrintf(f, indent+tsz, "\"#name\": {\n")
+		inPrintf(f, indent+tsz, "\"#value\": {\n")
 		writeSimpleProperties(simple, f, ctxt, indent+tsz+tsz)
 		inPrintf(f, indent+tsz, "},\n")
 		required := writeAttrs(simple, f, ctxt, indent+tsz)

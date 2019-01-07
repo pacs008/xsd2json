@@ -20,7 +20,7 @@ There is no direct support for attributes in JSON Schema, so the following mappi
 Example:
 `
 "IntrBkSttlmAmt": {
-   "#name": 1234,
+   "#value": 1234,
     "@Ccy": "GBP"
 },
 `
